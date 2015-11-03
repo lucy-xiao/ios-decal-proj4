@@ -19,13 +19,15 @@ ChoreIt is an app that allows a household to easily distribute chore responsibil
 
 ##Implementation
 ###Model
-*User.Swift
+* User.Swift
+
 ###View
-*LoginView
-*ChoreListTableView
-*HouseholdTableView
+* LoginView
+* ChoreListTableView
+* HouseholdTableView
+
 ###Controller
-*LoginViewController
-*ChoreListTableViewController
-*HouseholdTableView
+* LoginViewController
+* ChoreListTableViewController
+* HouseholdTableView
 
