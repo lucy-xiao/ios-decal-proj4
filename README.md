@@ -15,19 +15,27 @@ ChoreIt is an app that allows a household to easily distribute chore responsibil
 * Users can check out profiles to see streaks.
 
 ##Control Flow
-* Users are initially presented with a logo screen, followed by a log in or create an account view. If the user creates a new account, they enter a username and create a new group/household or join an existing one. Otherwise, the user will be taken to their list of chore(s) (Chores tab) this week. The user can tap on their chore to complete it and send a request to any member of the household to verify that the chore was completed. The user can tap on either the Chores tab or the Household tab. In the Household tab, the user can check out other members’ profiles and chores. 
+* Users are initially presented with a logo screen, followed by a log in or create an account view. If the user creates a new account, they enter a username and create a new group/household or join an existing one. Otherwise, the user will be taken to their list of chore(s) (Chores tab) this week. The user can tap on their chore to complete it and send a request to any member of the household to verify that the chore was completed. The user can tap on either the Chores tab or the Household tab. In the Household tab, the user can check out other members’ profiles and chores. On each members' profile, the user can check out each members' streak of chores, with 3 stars being the maximum.
 
 ##Implementation
 ###Model
 * User.Swift
+* Chore.Swift
 
 ###View
+* SplashView
 * LoginView
+* MyChoreView
+* AddChoreView
 * ChoreListTableView
 * HouseholdTableView
+* ProfileView
 
 ###Controller
 * LoginViewController
+* MyChoreViewController
+* AddChoreViewController
 * ChoreListTableViewController
 * HouseholdTableView
+* ProfileViewController
 
