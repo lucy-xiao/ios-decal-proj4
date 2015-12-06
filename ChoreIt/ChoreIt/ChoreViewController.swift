@@ -12,18 +12,31 @@ class ChoreViewController: UIViewController {
     
     var thisChore: Chore?
     var indexInList: Int?
+    var thisUserName: String!
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var choreLabel: UILabel!
     @IBOutlet var dueDateLabel: UILabel!
     @IBOutlet var finishedButton: UIButton!
         
+    @IBAction func debugging(sender: AnyObject) {
+        print(thisChore)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //thisChore = Chore(choreName: "Eat", username: "Helena")
+        self.reloadView()
+    }
+    
+    func reloadView() {
         if thisChore != nil {
-            nameLabel.text = thisChore!.person!.username
+            if thisChore!.person!.username == thisUserName {
+                nameLabel.text = thisUserName + " (you)"
+            } else {
+                nameLabel.text = thisChore!.person!.username
+            }
             choreLabel.text = thisChore!.choreName
             if thisChore!.finished {
                 finishedButton.setTitle("Finished!", forState: .Normal)
@@ -31,11 +44,10 @@ class ChoreViewController: UIViewController {
                 finishedButton.setTitle("Working on it...", forState: .Normal)
             }
         } else {
-            nameLabel.text = "You"
+            nameLabel.text = thisUserName + " (you)"
             choreLabel.text = "No chores! 🎉"
             finishedButton.setTitle("", forState: .Normal)
         }
-        
     }
     
     @IBAction func clickedFinished() {

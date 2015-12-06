@@ -13,16 +13,22 @@ class ChoreListTableViewController: UITableViewController {
     var choresList = [Chore]()
     var rowOfLastChoreSelected: Int? = nil
     var selectedAChore = false
-    var users = [User]()
+    var thisUser: User?
+    var myChoreViewController: ChoreViewController!
+    var users: [User?]!
+    var pickerDelegateAndSource: PickerViewDelegateAndSource?
     var seg: UIStoryboardSegue?
+    //var loginView: LoginViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        users = [User(username: "Joey"), User(username: "Sandy"), User(username: "Lucy")]
+        pickerDelegateAndSource = PickerViewDelegateAndSource(allUsers: users)
         // Do any additional setup after loading the view, typically from a nib.
-        let chore1 = Chore(choreName: "eat ALLLL the fooooood", username: "helena")
-        choresList.append(chore1)
-        let chore2 = Chore(choreName: "punch people", username: "lucy")
-        choresList.append(chore2)
+//        let chore1 = Chore(choreName: "eat ALLLL the fooooood", username: "helena")
+//        choresList.append(chore1)
+//        let chore2 = Chore(choreName: "punch people", username: "lucy")
+//        choresList.append(chore2)
         
     }
 
@@ -80,22 +86,45 @@ class ChoreListTableViewController: UITableViewController {
             } else {
                 print("   ", lastChoreSelected!.choreName)
             }*/
+        } else if (segue.identifier == "ToAddChoreView") {
+            let nav = segue.destinationViewController as! UINavigationController
+            let dest = nav.topViewController as! AddChoreTableViewController
+            dest.choreTable = self
+            dest.listOfUsers = users
+            dest.delegateAndSource = pickerDelegateAndSource
         }
     }
 
-    @IBAction func backFromAddChoreView(segue: UIStoryboardSegue) {
+    /*@IBAction func backFromAddChoreView(segue: UIStoryboardSegue) {
         self.tabBarController?.selectedIndex = 1
         
         for chore in choresList {
             print(chore.choreName, ": ", chore.finished)
         }
         
-        let source = segue.sourceViewController as! AddChoreViewController
+        let source = segue.sourceViewController as! AddChoreTableViewController
         let chore = source.chore as Chore!
         if ((chore) != nil) {
             choresList.append(chore)
             self.tableView.reloadData()
         }
+    }*/
+    
+    func backFromAddChoreView(addedChore: Chore?) {
+        self.tabBarController?.selectedIndex = 1
+        if (addedChore != nil) {
+            print(addedChore?.choreName, ": ", addedChore?.person.username)
+            choresList.append(addedChore!)
+            if addedChore!.person!.username == thisUser!.username {
+                myChoreViewController.thisChore = addedChore
+                myChoreViewController.reloadView()
+            }
+            self.tableView.reloadData()
+        }
+    }
+    
+    @IBAction func segueBackFromAdd(segue: UIStoryboardSegue) {
+        
     }
     
     @IBAction func backFromChoreView(segue: UIStoryboardSegue) {

@@ -17,10 +17,11 @@
 		9C2F403C1C13AD7800BCB489 /* ChoreItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F403B1C13AD7800BCB489 /* ChoreItUITests.swift */; };
 		9C2F40501C13AEDD00BCB489 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F404F1C13AEDD00BCB489 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		9C2F40521C13B00F00BCB489 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40511C13B00F00BCB489 /* Chore.swift */; settings = {ASSET_TAGS = (); }; };
-		9C2F40541C13B2B600BCB489 /* AddChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40531C13B2B600BCB489 /* AddChoreViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9C2F40561C13D04800BCB489 /* MyChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40551C13D04800BCB489 /* MyChoreViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9C2F40541C13B2B600BCB489 /* AddChoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40531C13B2B600BCB489 /* AddChoreTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		9C2F40581C13EBFF00BCB489 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2F40571C13EBFF00BCB489 /* list.png */; settings = {ASSET_TAGS = (); }; };
 		9C2F405A1C13ED5700BCB489 /* mychore.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2F40591C13ED5700BCB489 /* mychore.png */; settings = {ASSET_TAGS = (); }; };
+		9C2F405C1C14363300BCB489 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F405B1C14363300BCB489 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9C2F40621C145E8400BCB489 /* PickerViewDelegateAndSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40611C145E8400BCB489 /* PickerViewDelegateAndSource.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +58,11 @@
 		9C2F403D1C13AD7800BCB489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C2F404F1C13AEDD00BCB489 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9C2F40511C13B00F00BCB489 /* Chore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
-		9C2F40531C13B2B600BCB489 /* AddChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChoreViewController.swift; sourceTree = "<group>"; };
-		9C2F40551C13D04800BCB489 /* MyChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyChoreViewController.swift; sourceTree = "<group>"; };
+		9C2F40531C13B2B600BCB489 /* AddChoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChoreTableViewController.swift; sourceTree = "<group>"; };
 		9C2F40571C13EBFF00BCB489 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		9C2F40591C13ED5700BCB489 /* mychore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mychore.png; sourceTree = "<group>"; };
+		9C2F405B1C14363300BCB489 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9C2F40611C145E8400BCB489 /* PickerViewDelegateAndSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewDelegateAndSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +157,10 @@
 			isa = PBXGroup;
 			children = (
 				9C2F401B1C13AD7700BCB489 /* ChoreViewController.swift */,
-				9C2F40551C13D04800BCB489 /* MyChoreViewController.swift */,
 				9C2F401D1C13AD7700BCB489 /* ChoreListTableViewController.swift */,
-				9C2F40531C13B2B600BCB489 /* AddChoreViewController.swift */,
+				9C2F40531C13B2B600BCB489 /* AddChoreTableViewController.swift */,
+				9C2F405B1C14363300BCB489 /* LoginViewController.swift */,
+				9C2F40611C145E8400BCB489 /* PickerViewDelegateAndSource.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -294,12 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2F405C1C14363300BCB489 /* LoginViewController.swift in Sources */,
 				9C2F40501C13AEDD00BCB489 /* User.swift in Sources */,
 				9C2F401E1C13AD7700BCB489 /* ChoreListTableViewController.swift in Sources */,
 				9C2F40521C13B00F00BCB489 /* Chore.swift in Sources */,
+				9C2F40621C145E8400BCB489 /* PickerViewDelegateAndSource.swift in Sources */,
 				9C2F401A1C13AD7700BCB489 /* AppDelegate.swift in Sources */,
-				9C2F40541C13B2B600BCB489 /* AddChoreViewController.swift in Sources */,
-				9C2F40561C13D04800BCB489 /* MyChoreViewController.swift in Sources */,
+				9C2F40541C13B2B600BCB489 /* AddChoreTableViewController.swift in Sources */,
 				9C2F401C1C13AD7700BCB489 /* ChoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
