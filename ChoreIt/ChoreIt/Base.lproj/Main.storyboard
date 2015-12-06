@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Chore-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController title="My Chore" id="9pv-A4-QxB" customClass="ChoreViewController" customModule="ChoreIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BSm-f0-rYv">
+                                <rect key="frame" x="20" y="328" width="374" height="80"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <color key="textColor" red="0.15015388257575757" green="0.15015388257575757" blue="0.15015388257575757" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Chore" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-sI-2hk">
+                                <rect key="frame" x="20" y="109" width="374" height="230"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJP-5q-NGK">
+                                <rect key="frame" x="127" y="416" width="161" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Working on it..."/>
+                                <connections>
+                                    <action selector="clickedFinished" destination="9pv-A4-QxB" eventType="touchUpInside" id="vsv-Zp-Nlr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wbw-sI-2hk" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="1KK-qU-Tt7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wbw-sI-2hk" secondAttribute="trailing" id="2pp-cg-lRz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Wbw-sI-2hk" secondAttribute="leading" id="Dmj-2C-nHA"/>
+                            <constraint firstItem="BSm-f0-rYv" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bNW-xA-QFH"/>
+                            <constraint firstItem="bJP-5q-NGK" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="rTo-gN-9BH"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Chore" id="DSb-1L-NiM">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="e5E-6c-H1G">
+                            <connections>
+                                <segue destination="Gix-3s-5JW" kind="unwind" identifier="unwindBackToTable" unwindAction="backFromChoreView:" id="9go-d1-YnG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="choreLabel" destination="Wbw-sI-2hk" id="KXG-HE-B3s"/>
+                        <outlet property="finishedButton" destination="bJP-5q-NGK" id="T2Y-j8-f9Z"/>
+                        <outlet property="nameLabel" destination="BSm-f0-rYv" id="wcB-Ro-D2B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <exit id="Gix-3s-5JW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2216" y="220"/>
+        </scene>
+        <!--Chore List Table View Controller-->
+        <scene sceneID="evo-dV-Aff">
+            <objects>
+                <tableViewController id="Cqp-c1-DZo" customClass="ChoreListTableViewController" customModule="ChoreIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Yr-Sh-vJB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChoreCell" textLabel="BmT-r3-dtS" detailTextLabel="NnO-rI-X9W" style="IBUITableViewCellStyleSubtitle" id="oeq-lC-BVf">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oeq-lC-BVf" id="2VR-bY-eEI">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BmT-r3-dtS">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NnO-rI-X9W">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="oLO-VX-n6q" kind="show" identifier="ToChoreDetailView" id="ne5-qj-KMV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cqp-c1-DZo" id="Caw-b9-8Gn"/>
+                            <outlet property="delegate" destination="Cqp-c1-DZo" id="ciO-Rb-vGy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="VRx-df-ynj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="t9a-FK-mIb">
+                            <connections>
+                                <segue destination="AFI-6d-cwl" kind="show" id="9wZ-sN-R24"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Cz-CY-DNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2216" y="-547"/>
+        </scene>
+        <!--Add Chore-->
+        <scene sceneID="lCK-Q3-UDm">
+            <objects>
+                <viewController id="kIh-xx-fTe" customClass="AddChoreViewController" customModule="ChoreIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Exl-Of-TXK"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Jx-tx-Cn7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BdK-6W-eXe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYz-PR-FGs">
+                                <rect key="frame" x="25" y="287" width="369" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zYz-PR-FGs" secondAttribute="trailing" id="1jv-TP-OvT"/>
+                            <constraint firstItem="zYz-PR-FGs" firstAttribute="leading" secondItem="BdK-6W-eXe" secondAttribute="leadingMargin" constant="5" id="xU7-Zp-yH4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Chore" id="MPv-zu-RXC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VJO-yJ-wMM">
+                            <connections>
+                                <segue destination="Af0-xF-dkh" kind="unwind" unwindAction="backFromCancelAddChore:" id="sEM-Lw-350"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="IdH-3y-xfQ">
+                            <connections>
+                                <segue destination="Af0-xF-dkh" kind="unwind" unwindAction="backFromAddChoreView:" id="DNp-GV-Bnn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="addChoreTextField" destination="zYz-PR-FGs" id="Xn4-nV-pa4"/>
+                        <outlet property="saveButton" destination="IdH-3y-xfQ" id="aIN-b2-qNM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLk-Ro-Ta5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Af0-xF-dkh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3080" y="-269"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6Wi-HQ-oPK">
+            <objects>
+                <viewController id="Cb2-iB-uuJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dNi-KL-DnR"/>
+                        <viewControllerLayoutGuide type="bottom" id="ToF-Uu-PJi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nP9-MN-Nuq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-Qt-p2n">
+                                <rect key="frame" x="252" y="165" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-AW-hcj">
+                                <rect key="frame" x="222" y="127" width="156" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ti-AK-YhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-227" y="-258"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hkD-mI-UgH" kind="relationship" relationship="viewControllers" id="Um9-C8-R5k"/>
+                        <segue destination="Cs0-Tc-3uf" kind="relationship" relationship="viewControllers" id="KUE-63-kmA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="-258"/>
+        </scene>
+        <!--Chore List-->
+        <scene sceneID="l3J-fb-D7c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cs0-Tc-3uf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chore List" image="list.png" id="r8O-CI-rNv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1pp-Je-Mnu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cqp-c1-DZo" kind="relationship" relationship="rootViewController" id="vEG-Vf-PAh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OsS-sb-Bmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="-547"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qes-ix-LWO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AFI-6d-cwl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z4K-Y2-Nmv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kIh-xx-fTe" kind="relationship" relationship="rootViewController" id="1Vm-Ax-wlS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNb-5B-zF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3100" y="-1071"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="s0l-7B-I0S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oLO-VX-n6q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HA1-lc-Y4o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="sIN-8j-nDi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hf-ys-h7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="220"/>
+        </scene>
+        <!--My Chore-->
+        <scene sceneID="j11-Z6-yTY">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Y5-f5-PfG" sceneMemberID="firstResponder"/>
+                <viewController title="My Chore" id="nTe-VN-Mrx" customClass="ChoreViewController" customModule="ChoreIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="91S-hy-Tb5"/>
+                        <viewControllerLayoutGuide type="bottom" id="rDO-9k-efY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MsZ-wD-BSI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PaK-r0-F7H">
+                                <rect key="frame" x="20" y="328" width="374" height="80"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <color key="textColor" red="0.16094539141414144" green="0.16094539141414144" blue="0.16094539141414144" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1p-N0-fhj">
+                                <rect key="frame" x="130" y="424" width="155" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Working on it..."/>
+                                <connections>
+                                    <action selector="clickedFinished" destination="nTe-VN-Mrx" eventType="touchUpInside" id="AGv-rI-Cew"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Chore" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="WhU-FI-FG5">
+                                <rect key="frame" x="20" y="109" width="374" height="230"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="WhU-FI-FG5" secondAttribute="leading" id="aur-BN-sbB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PaK-r0-F7H" secondAttribute="trailing" id="dNU-l5-iK5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="PaK-r0-F7H" secondAttribute="leading" id="jtB-V4-qgF"/>
+                            <constraint firstItem="WhU-FI-FG5" firstAttribute="centerX" secondItem="MsZ-wD-BSI" secondAttribute="centerX" id="r20-eD-bGh"/>
+                            <constraint firstItem="PaK-r0-F7H" firstAttribute="centerX" secondItem="MsZ-wD-BSI" secondAttribute="centerX" id="t2M-8D-C6b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WhU-FI-FG5" secondAttribute="trailing" id="tDH-K4-woS"/>
+                            <constraint firstItem="l1p-N0-fhj" firstAttribute="centerX" secondItem="MsZ-wD-BSI" secondAttribute="centerX" id="vsT-kx-rmB"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="My Chore" id="hif-gv-UrR"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="choreLabel" destination="WhU-FI-FG5" id="Alo-wX-4fK"/>
+                        <outlet property="finishedButton" destination="l1p-N0-fhj" id="YIt-46-hBI"/>
+                        <outlet property="nameLabel" destination="PaK-r0-F7H" id="ld6-Vu-fju"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2244" y="-1316"/>
+        </scene>
+        <!--My Chore-->
+        <scene sceneID="QBc-1s-LaH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hkD-mI-UgH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Chore" image="mychore.png" id="CfU-hP-hxx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zzR-WE-Tkq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nTe-VN-Mrx" kind="relationship" relationship="rootViewController" id="xdi-U1-bLI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xE6-DH-FGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="-1316"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="list.png" width="27" height="26"/>
+        <image name="mychore.png" width="27" height="27"/>
+    </resources>
+</document>

@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C2F401A1C13AD7700BCB489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40191C13AD7700BCB489 /* AppDelegate.swift */; };
+		9C2F401C1C13AD7700BCB489 /* ChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F401B1C13AD7700BCB489 /* ChoreViewController.swift */; };
+		9C2F401E1C13AD7700BCB489 /* ChoreListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F401D1C13AD7700BCB489 /* ChoreListTableViewController.swift */; };
+		9C2F40211C13AD7700BCB489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2F401F1C13AD7700BCB489 /* Main.storyboard */; };
+		9C2F40231C13AD7700BCB489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C2F40221C13AD7700BCB489 /* Assets.xcassets */; };
+		9C2F40261C13AD7700BCB489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2F40241C13AD7700BCB489 /* LaunchScreen.storyboard */; };
+		9C2F40311C13AD7700BCB489 /* ChoreItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40301C13AD7700BCB489 /* ChoreItTests.swift */; };
+		9C2F403C1C13AD7800BCB489 /* ChoreItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F403B1C13AD7800BCB489 /* ChoreItUITests.swift */; };
+		9C2F40501C13AEDD00BCB489 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F404F1C13AEDD00BCB489 /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		9C2F40521C13B00F00BCB489 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40511C13B00F00BCB489 /* Chore.swift */; settings = {ASSET_TAGS = (); }; };
+		9C2F40541C13B2B600BCB489 /* AddChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40531C13B2B600BCB489 /* AddChoreViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9C2F40561C13D04800BCB489 /* MyChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40551C13D04800BCB489 /* MyChoreViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9C2F40581C13EBFF00BCB489 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2F40571C13EBFF00BCB489 /* list.png */; settings = {ASSET_TAGS = (); }; };
+		9C2F405A1C13ED5700BCB489 /* mychore.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2F40591C13ED5700BCB489 /* mychore.png */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C2F402D1C13AD7700BCB489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C2F400E1C13AD7700BCB489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C2F40151C13AD7700BCB489;
+			remoteInfo = ChoreIt;
+		};
+		9C2F40381C13AD7800BCB489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C2F400E1C13AD7700BCB489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C2F40151C13AD7700BCB489;
+			remoteInfo = ChoreIt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C2F40161C13AD7700BCB489 /* ChoreIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoreIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C2F40191C13AD7700BCB489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C2F401B1C13AD7700BCB489 /* ChoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreViewController.swift; sourceTree = "<group>"; };
+		9C2F401D1C13AD7700BCB489 /* ChoreListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListTableViewController.swift; sourceTree = "<group>"; };
+		9C2F40201C13AD7700BCB489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C2F40221C13AD7700BCB489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C2F40251C13AD7700BCB489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C2F40271C13AD7700BCB489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C2F402C1C13AD7700BCB489 /* ChoreItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChoreItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C2F40301C13AD7700BCB489 /* ChoreItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreItTests.swift; sourceTree = "<group>"; };
+		9C2F40321C13AD7700BCB489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C2F40371C13AD7800BCB489 /* ChoreItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChoreItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C2F403B1C13AD7800BCB489 /* ChoreItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreItUITests.swift; sourceTree = "<group>"; };
+		9C2F403D1C13AD7800BCB489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C2F404F1C13AEDD00BCB489 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9C2F40511C13B00F00BCB489 /* Chore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
+		9C2F40531C13B2B600BCB489 /* AddChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChoreViewController.swift; sourceTree = "<group>"; };
+		9C2F40551C13D04800BCB489 /* MyChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyChoreViewController.swift; sourceTree = "<group>"; };
+		9C2F40571C13EBFF00BCB489 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		9C2F40591C13ED5700BCB489 /* mychore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mychore.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C2F40131C13AD7700BCB489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C2F40291C13AD7700BCB489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C2F40341C13AD7800BCB489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C2F400D1C13AD7700BCB489 = {
+			isa = PBXGroup;
+			children = (
+				9C2F40181C13AD7700BCB489 /* ChoreIt */,
+				9C2F402F1C13AD7700BCB489 /* ChoreItTests */,
+				9C2F403A1C13AD7800BCB489 /* ChoreItUITests */,
+				9C2F40171C13AD7700BCB489 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C2F40171C13AD7700BCB489 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C2F40161C13AD7700BCB489 /* ChoreIt.app */,
+				9C2F402C1C13AD7700BCB489 /* ChoreItTests.xctest */,
+				9C2F40371C13AD7800BCB489 /* ChoreItUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C2F40181C13AD7700BCB489 /* ChoreIt */ = {
+			isa = PBXGroup;
+			children = (
+				9C2F40491C13AE3500BCB489 /* Model */,
+				9C2F40191C13AD7700BCB489 /* AppDelegate.swift */,
+				9C2F404A1C13AE4400BCB489 /* Controller */,
+				9C2F401F1C13AD7700BCB489 /* Main.storyboard */,
+				9C2F40591C13ED5700BCB489 /* mychore.png */,
+				9C2F40571C13EBFF00BCB489 /* list.png */,
+				9C2F40221C13AD7700BCB489 /* Assets.xcassets */,
+				9C2F40241C13AD7700BCB489 /* LaunchScreen.storyboard */,
+				9C2F40271C13AD7700BCB489 /* Info.plist */,
+			);
+			path = ChoreIt;
+			sourceTree = "<group>";
+		};
+		9C2F402F1C13AD7700BCB489 /* ChoreItTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C2F40301C13AD7700BCB489 /* ChoreItTests.swift */,
+				9C2F40321C13AD7700BCB489 /* Info.plist */,
+			);
+			path = ChoreItTests;
+			sourceTree = "<group>";
+		};
+		9C2F403A1C13AD7800BCB489 /* ChoreItUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C2F403B1C13AD7800BCB489 /* ChoreItUITests.swift */,
+				9C2F403D1C13AD7800BCB489 /* Info.plist */,
+			);
+			path = ChoreItUITests;
+			sourceTree = "<group>";
+		};
+		9C2F40491C13AE3500BCB489 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C2F404F1C13AEDD00BCB489 /* User.swift */,
+				9C2F40511C13B00F00BCB489 /* Chore.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9C2F404A1C13AE4400BCB489 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C2F401B1C13AD7700BCB489 /* ChoreViewController.swift */,
+				9C2F40551C13D04800BCB489 /* MyChoreViewController.swift */,
+				9C2F401D1C13AD7700BCB489 /* ChoreListTableViewController.swift */,
+				9C2F40531C13B2B600BCB489 /* AddChoreViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C2F40151C13AD7700BCB489 /* ChoreIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C2F40401C13AD7800BCB489 /* Build configuration list for PBXNativeTarget "ChoreIt" */;
+			buildPhases = (
+				9C2F40121C13AD7700BCB489 /* Sources */,
+				9C2F40131C13AD7700BCB489 /* Frameworks */,
+				9C2F40141C13AD7700BCB489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChoreIt;
+			productName = ChoreIt;
+			productReference = 9C2F40161C13AD7700BCB489 /* ChoreIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C2F402B1C13AD7700BCB489 /* ChoreItTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C2F40431C13AD7800BCB489 /* Build configuration list for PBXNativeTarget "ChoreItTests" */;
+			buildPhases = (
+				9C2F40281C13AD7700BCB489 /* Sources */,
+				9C2F40291C13AD7700BCB489 /* Frameworks */,
+				9C2F402A1C13AD7700BCB489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C2F402E1C13AD7700BCB489 /* PBXTargetDependency */,
+			);
+			name = ChoreItTests;
+			productName = ChoreItTests;
+			productReference = 9C2F402C1C13AD7700BCB489 /* ChoreItTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C2F40361C13AD7800BCB489 /* ChoreItUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C2F40461C13AD7800BCB489 /* Build configuration list for PBXNativeTarget "ChoreItUITests" */;
+			buildPhases = (
+				9C2F40331C13AD7800BCB489 /* Sources */,
+				9C2F40341C13AD7800BCB489 /* Frameworks */,
+				9C2F40351C13AD7800BCB489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C2F40391C13AD7800BCB489 /* PBXTargetDependency */,
+			);
+			name = ChoreItUITests;
+			productName = ChoreItUITests;
+			productReference = 9C2F40371C13AD7800BCB489 /* ChoreItUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C2F400E1C13AD7700BCB489 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Lucy Xiao";
+				TargetAttributes = {
+					9C2F40151C13AD7700BCB489 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					9C2F402B1C13AD7700BCB489 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 9C2F40151C13AD7700BCB489;
+					};
+					9C2F40361C13AD7800BCB489 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 9C2F40151C13AD7700BCB489;
+					};
+				};
+			};
+			buildConfigurationList = 9C2F40111C13AD7700BCB489 /* Build configuration list for PBXProject "ChoreIt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C2F400D1C13AD7700BCB489;
+			productRefGroup = 9C2F40171C13AD7700BCB489 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C2F40151C13AD7700BCB489 /* ChoreIt */,
+				9C2F402B1C13AD7700BCB489 /* ChoreItTests */,
+				9C2F40361C13AD7800BCB489 /* ChoreItUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C2F40141C13AD7700BCB489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2F40261C13AD7700BCB489 /* LaunchScreen.storyboard in Resources */,
+				9C2F40231C13AD7700BCB489 /* Assets.xcassets in Resources */,
+				9C2F405A1C13ED5700BCB489 /* mychore.png in Resources */,
+				9C2F40211C13AD7700BCB489 /* Main.storyboard in Resources */,
+				9C2F40581C13EBFF00BCB489 /* list.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C2F402A1C13AD7700BCB489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C2F40351C13AD7800BCB489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C2F40121C13AD7700BCB489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2F40501C13AEDD00BCB489 /* User.swift in Sources */,
+				9C2F401E1C13AD7700BCB489 /* ChoreListTableViewController.swift in Sources */,
+				9C2F40521C13B00F00BCB489 /* Chore.swift in Sources */,
+				9C2F401A1C13AD7700BCB489 /* AppDelegate.swift in Sources */,
+				9C2F40541C13B2B600BCB489 /* AddChoreViewController.swift in Sources */,
+				9C2F40561C13D04800BCB489 /* MyChoreViewController.swift in Sources */,
+				9C2F401C1C13AD7700BCB489 /* ChoreViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C2F40281C13AD7700BCB489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2F40311C13AD7700BCB489 /* ChoreItTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C2F40331C13AD7800BCB489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2F403C1C13AD7800BCB489 /* ChoreItUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C2F402E1C13AD7700BCB489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C2F40151C13AD7700BCB489 /* ChoreIt */;
+			targetProxy = 9C2F402D1C13AD7700BCB489 /* PBXContainerItemProxy */;
+		};
+		9C2F40391C13AD7800BCB489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C2F40151C13AD7700BCB489 /* ChoreIt */;
+			targetProxy = 9C2F40381C13AD7800BCB489 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C2F401F1C13AD7700BCB489 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C2F40201C13AD7700BCB489 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C2F40241C13AD7700BCB489 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C2F40251C13AD7700BCB489 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C2F403E1C13AD7800BCB489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C2F403F1C13AD7800BCB489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C2F40411C13AD7800BCB489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChoreIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Lucy.ChoreIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9C2F40421C13AD7800BCB489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChoreIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Lucy.ChoreIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9C2F40441C13AD7800BCB489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChoreItTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Lucy.ChoreItTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChoreIt.app/ChoreIt";
+			};
+			name = Debug;
+		};
+		9C2F40451C13AD7800BCB489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChoreItTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Lucy.ChoreItTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChoreIt.app/ChoreIt";
+			};
+			name = Release;
+		};
+		9C2F40471C13AD7800BCB489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChoreItUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Lucy.ChoreItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ChoreIt;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9C2F40481C13AD7800BCB489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChoreItUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Lucy.ChoreItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ChoreIt;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C2F40111C13AD7700BCB489 /* Build configuration list for PBXProject "ChoreIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C2F403E1C13AD7800BCB489 /* Debug */,
+				9C2F403F1C13AD7800BCB489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C2F40401C13AD7800BCB489 /* Build configuration list for PBXNativeTarget "ChoreIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C2F40411C13AD7800BCB489 /* Debug */,
+				9C2F40421C13AD7800BCB489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C2F40431C13AD7800BCB489 /* Build configuration list for PBXNativeTarget "ChoreItTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C2F40441C13AD7800BCB489 /* Debug */,
+				9C2F40451C13AD7800BCB489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C2F40461C13AD7800BCB489 /* Build configuration list for PBXNativeTarget "ChoreItUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C2F40471C13AD7800BCB489 /* Debug */,
+				9C2F40481C13AD7800BCB489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C2F400E1C13AD7700BCB489 /* Project object */;
+}
