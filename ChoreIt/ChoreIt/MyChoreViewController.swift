@@ -8,20 +8,17 @@
 
 import UIKit
 
-class ChoreViewController: UIViewController {
+class MyChoreViewController: UIViewController {
     
     var thisChore: Chore?
     var indexInList: Int?
     var thisUserName: String!
     var choreListTable: ChoreListTableViewController!
-    
-    
-    @IBOutlet var thisChoreLabel: UILabel!
-    @IBOutlet var thisNameLabel: UILabel!
-    @IBOutlet var thisFinishedButton: UIButton!
+//    var choreListTable = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("ChoreListTableViewController") as! ChoreListTableViewController
 
-    
-    
+    @IBOutlet var myChoreLabel: UILabel!
+    @IBOutlet var myNameLabel: UILabel!
+    @IBOutlet var myFinishedButton: UIButton!
 //    @IBOutlet var nameLabel: UILabel!
 //    @IBOutlet var choreLabel: UILabel!
 //    @IBOutlet var dueDateLabel: UILabel!
@@ -39,35 +36,31 @@ class ChoreViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //thisChore = Chore(choreName: "Eat", username: "Helena")
-        self.reloadView()
     }
     
     func reloadView() {
         if thisChore != nil {
             print("reloading detail view")
             print("thisChore!.person", thisChore!.person)
-            print("thisChore!.choreName", thisChore!.choreName)
-//            print(thisChoreLabel)
             if thisChore!.person!.username == thisUserName {
-                thisNameLabel.text = thisUserName + " (you)"
+                myNameLabel.text = thisUserName + " (you)"
             } else {
-//                print(choreLabel)
-//                print(nameLabel)
-//                print(thisNameLabel.text)
+                print(myNameLabel)
+                print(myNameLabel.text)
                 print(thisChore!.person)
                 print(thisChore!.person!.username)
-                self.thisNameLabel.text = thisChore!.person!.username
+                myNameLabel.text = thisChore!.person!.username
             }
-            thisChoreLabel.text = thisChore!.choreName
+            myChoreLabel.text = thisChore!.choreName
             if thisChore!.finished {
-                thisFinishedButton.setTitle("Finished!", forState: .Normal)
+                myFinishedButton.setTitle("Finished!", forState: .Normal)
             } else {
-                thisFinishedButton.setTitle("Working on it...", forState: .Normal)
+                myFinishedButton.setTitle("Working on it...", forState: .Normal)
             }
         } else {
-            thisNameLabel.text = thisUserName + " (you)"
-            thisChoreLabel.text = "No chores! 🎉"
-            thisFinishedButton.setTitle("", forState: .Normal)
+            myNameLabel.text = thisUserName + " (you)"
+            myChoreLabel.text = "No chores! 🎉"
+            myFinishedButton.setTitle("", forState: .Normal)
         }
     }
     
@@ -76,10 +69,8 @@ class ChoreViewController: UIViewController {
             return
         }
         if thisChore!.finished {
-//            print(thisChore!.finished)
             thisChore!.finished = false
         } else {
-//             print(thisChore!.finished)
             thisChore!.finished = true
         }
         let cellPath = NSIndexPath(forRow: thisChore!.indexRow, inSection: 0)
@@ -95,7 +86,7 @@ class ChoreViewController: UIViewController {
         print("clickedFinished: ", thisChore!.finished)
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -104,17 +95,15 @@ class ChoreViewController: UIViewController {
     @IBAction func pressedBack() {
         
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "unwindBackToTable") {
             let dest = segue.destinationViewController as! ChoreListTableViewController
-            if (thisChore != nil) {
-                dest.choresList[indexInList!] = thisChore!
-                print("prepareForSegue: ", thisChore!.finished)
-            }
+            dest.choresList[indexInList!] = thisChore!
+            print("prepareForSegue: ", thisChore!.finished)
         }
     }
-
-
+    
+    
 }
 

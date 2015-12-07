@@ -14,7 +14,8 @@ class ChoreListTableViewController: UITableViewController {
     var rowOfLastChoreSelected: Int? = nil
     var selectedAChore = false
     var thisUser: User?
-    var myChoreViewController: ChoreViewController!
+//    var choreViewController: MyChoreViewController!
+    var choreViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MyChoreViewController") as! MyChoreViewController
     var users: [User?]!
     var pickerDelegateAndSource: PickerViewDelegateAndSource?
     var seg: UIStoryboardSegue?
@@ -49,12 +50,16 @@ class ChoreListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ChoreCell", forIndexPath: indexPath)
         cell.textLabel?.text = choresList[indexPath.row].choreName
         cell.detailTextLabel!.text = choresList[indexPath.row].person!.username
-        if choresList[indexPath.row].finished == true {
+        self.checkOffFinishedChores(cell, indexRow: indexPath.row)
+        return cell
+    }
+    
+    func checkOffFinishedChores(cell: UITableViewCell, indexRow: Int) {
+        if choresList[indexRow].finished == true {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.None
         }
-        return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -65,8 +70,11 @@ class ChoreListTableViewController: UITableViewController {
         } else {
             print("   ", lastChoreSelected!.choreName)
         }*/
+        print("didsselecttrowatindexpath: ", rowOfLastChoreSelected)
         selectedAChore = true
-        prepareForSegue(seg!, sender: seg)
+//        prepareForSegue(seg!, sender: seg)
+        performSegueWithIdentifier("ToChoreDetailView", sender: nil)
+
     //choresList[indexPath.row] = NSDate()
     }
     
@@ -75,9 +83,24 @@ class ChoreListTableViewController: UITableViewController {
         if (segue.identifier == "ToChoreDetailView") {
             let nav = segue.destinationViewController as! UINavigationController
             let dest = nav.topViewController as! ChoreViewController
+            print("PRINITING CHORESLIST")
+            print(rowOfLastChoreSelected)
+            for item in choresList {
+                print(item)
+            }
+            print(choresList[rowOfLastChoreSelected!])
+            print(choresList[rowOfLastChoreSelected!].person)
+            print(choresList[rowOfLastChoreSelected!].person.username)
+            dest.thisUserName = choresList[rowOfLastChoreSelected!].person.username
+            print("selectedAChore111: ",selectedAChore)
             if selectedAChore {
+                
                 dest.thisChore = choresList[rowOfLastChoreSelected!]
                 dest.indexInList = rowOfLastChoreSelected
+                dest.choreListTable = self
+//                dest.thisChoreLabel.text = choresList[rowOfLastChoreSelected!].choreName
+//                print("dest.thisChoreLabel.text: ", dest.thisChoreLabel.text)
+//                dest.reloadView()
             }
             selectedAChore = false
             /*print("prepareForSegue:")
@@ -110,14 +133,15 @@ class ChoreListTableViewController: UITableViewController {
         }
     }*/
     
-    func backFromAddChoreView(addedChore: Chore?) {
+    func backFromAddChoreView(var addedChore: Chore?) {
         self.tabBarController?.selectedIndex = 1
         if (addedChore != nil) {
-            print(addedChore?.choreName, ": ", addedChore?.person.username)
+            addedChore!.indexRow = choresList.count
+            print("backfromaddChoreView= ", addedChore?.choreName, ": ", addedChore?.person.username, ": ", addedChore!.indexRow)
             choresList.append(addedChore!)
             if addedChore!.person!.username == thisUser!.username {
-                myChoreViewController.thisChore = addedChore
-                myChoreViewController.reloadView()
+                choreViewController.thisChore = addedChore
+                choreViewController.reloadView()
             }
             self.tableView.reloadData()
         }
@@ -142,6 +166,11 @@ class ChoreListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
         if (editingStyle == UITableViewCellEditingStyle.Delete){
             choresList.removeAtIndex(indexPath.row)
+            if (indexPath.row < (choresList.count - 1)) {
+                for index in (indexPath.row)...(choresList.count - 1) {
+                    choresList[index].indexRow = index
+                }
+            }
             self.tableView.reloadData()
             /*if (rowOfLastChoreSelected > 0) {
                 rowOfLastChoreSelected! = rowOfLastChoreSelected! - 1

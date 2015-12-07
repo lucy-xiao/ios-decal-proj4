@@ -36,14 +36,15 @@ class LoginViewController: UIViewController {
                 user = User(username: nameTextField.text!)
                 let bar = segue.destinationViewController as! UITabBarController
                 let navForMyChore = bar.customizableViewControllers![0] as! UINavigationController
-                let destMyChore = navForMyChore.topViewController as! ChoreViewController
+                let destMyChore = navForMyChore.topViewController as! MyChoreViewController
                 
                 let navForTableView = bar.customizableViewControllers![1] as! UINavigationController
                 let choreTable = navForTableView.topViewController as! ChoreListTableViewController
                 
                 destMyChore.thisUserName = user.username
+                destMyChore.choreListTable = choreTable
                 choreTable.thisUser = user
-                choreTable.myChoreViewController = destMyChore
+                choreTable.choreViewController = destMyChore
             }
             // later, add checking valid house codes
         } else {

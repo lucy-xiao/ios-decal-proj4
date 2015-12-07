@@ -14,6 +14,7 @@ struct Chore {
     var person: User!
     var finished: Bool
     var timeCompleted: NSDate?
+    var indexRow = 0
     
     init(choreName: String?) {
         self.choreName = choreName
