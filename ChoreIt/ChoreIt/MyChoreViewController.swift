@@ -78,10 +78,13 @@ class MyChoreViewController: UIViewController {
         if thisChore!.finished {
             thisChore!.finished = false
             thisUser.finishedChore = false
+            myFinishedButton.setTitle("Finished!", forState: .Normal)
+
             
         } else {
             thisChore!.finished = true
             thisUser.finishedChore = true
+            myFinishedButton.setTitle("Working on it...", forState: .Normal)
         }
         let cellPath = NSIndexPath(forRow: thisChore!.indexRow, inSection: 0)
         let cell = choreListTable.tableView.cellForRowAtIndexPath(cellPath)

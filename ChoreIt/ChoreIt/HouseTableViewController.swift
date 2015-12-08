@@ -70,6 +70,11 @@ class HouseTableViewController:UITableViewController {
         //choresList[indexPath.row] = NSDate()
     }
     
+    @IBAction func segueBackFromAddMemberCancel(segue: UIStoryboardSegue) {
+        
+        
+    }
+    
     @IBAction func segueBackFromAddMember(segue: UIStoryboardSegue) {
         print(choreListTable.users)
         print("HUMUNA HUMUNA HUMUNA")

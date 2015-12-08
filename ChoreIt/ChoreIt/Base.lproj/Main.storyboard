@@ -341,6 +341,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Working on it..."/>
                                 <connections>
+                                    <action selector="clickedFinished" destination="p1o-DD-xuC" eventType="touchUpInside" id="Ls5-Mw-zBX"/>
                                     <action selector="clickedFinished" destination="9pv-A4-QxB" eventType="touchUpInside" id="SHo-uq-W7s"/>
                                 </connections>
                             </button>
@@ -469,7 +470,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add House Member" id="d4w-cc-NPC">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oVf-Zn-OTk"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oVf-Zn-OTk">
+                            <connections>
+                                <segue destination="Jgd-Qi-waI" kind="unwind" unwindAction="segueBackFromAddMemberCancel:" id="9fG-r1-6ZW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="kfZ-FV-y9L">
                             <connections>
                                 <action selector="pressedSaveButton" destination="AaJ-iD-lsi" id="vHw-2G-Qvt"/>
@@ -559,7 +564,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CN-kf-mBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4006" y="1150"/>
+            <point key="canvasLocation" x="1254" y="1382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qfd-16-jlJ">
