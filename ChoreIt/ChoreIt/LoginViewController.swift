@@ -41,10 +41,22 @@ class LoginViewController: UIViewController {
                 let navForTableView = bar.customizableViewControllers![1] as! UINavigationController
                 let choreTable = navForTableView.topViewController as! ChoreListTableViewController
                 
-                destMyChore.thisUserName = user.username
+                let navForHouseTableView = bar.customizableViewControllers![2] as! UINavigationController
+                let houseMemberTable = navForHouseTableView.topViewController as! HouseTableViewController
+                
+                
+                destMyChore.thisUser = user
                 destMyChore.choreListTable = choreTable
+                
                 choreTable.thisUser = user
+                choreTable.users = [user]
+                
                 choreTable.choreViewController = destMyChore
+                houseMemberTable.choreListTable = choreTable
+                
+                destMyChore.tabBar = bar
+                choreTable.tabBar = bar
+                houseMemberTable.tabBar = bar
             }
             // later, add checking valid house codes
         } else {

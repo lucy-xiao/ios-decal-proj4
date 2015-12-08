@@ -23,6 +23,8 @@
 		9C2F405C1C14363300BCB489 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F405B1C14363300BCB489 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		9C2F40621C145E8400BCB489 /* PickerViewDelegateAndSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40611C145E8400BCB489 /* PickerViewDelegateAndSource.swift */; settings = {ASSET_TAGS = (); }; };
 		9C2F40651C14E1D500BCB489 /* MyChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40641C14E1D500BCB489 /* MyChoreViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9C2F40671C167BA600BCB489 /* HouseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40661C167BA600BCB489 /* HouseTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9C2F40691C169B1000BCB489 /* AddHouseMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F40681C169B1000BCB489 /* AddHouseMemberTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +66,9 @@
 		9C2F40591C13ED5700BCB489 /* mychore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mychore.png; sourceTree = "<group>"; };
 		9C2F405B1C14363300BCB489 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9C2F40611C145E8400BCB489 /* PickerViewDelegateAndSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewDelegateAndSource.swift; sourceTree = "<group>"; };
-		9C2F40631C1478E400BCB489 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		9C2F40641C14E1D500BCB489 /* MyChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyChoreViewController.swift; sourceTree = "<group>"; };
+		9C2F40661C167BA600BCB489 /* HouseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTableViewController.swift; sourceTree = "<group>"; };
+		9C2F40681C169B1000BCB489 /* AddHouseMemberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouseMemberTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +123,6 @@
 				9C2F40191C13AD7700BCB489 /* AppDelegate.swift */,
 				9C2F404A1C13AE4400BCB489 /* Controller */,
 				9C2F401F1C13AD7700BCB489 /* Main.storyboard */,
-				9C2F40631C1478E400BCB489 /* MyPlayground.playground */,
 				9C2F40591C13ED5700BCB489 /* mychore.png */,
 				9C2F40571C13EBFF00BCB489 /* list.png */,
 				9C2F40221C13AD7700BCB489 /* Assets.xcassets */,
@@ -163,9 +165,11 @@
 				9C2F401B1C13AD7700BCB489 /* ChoreViewController.swift */,
 				9C2F401D1C13AD7700BCB489 /* ChoreListTableViewController.swift */,
 				9C2F40531C13B2B600BCB489 /* AddChoreTableViewController.swift */,
+				9C2F40681C169B1000BCB489 /* AddHouseMemberTableViewController.swift */,
 				9C2F405B1C14363300BCB489 /* LoginViewController.swift */,
 				9C2F40611C145E8400BCB489 /* PickerViewDelegateAndSource.swift */,
 				9C2F40641C14E1D500BCB489 /* MyChoreViewController.swift */,
+				9C2F40661C167BA600BCB489 /* HouseTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -303,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C2F405C1C14363300BCB489 /* LoginViewController.swift in Sources */,
+				9C2F40691C169B1000BCB489 /* AddHouseMemberTableViewController.swift in Sources */,
 				9C2F40501C13AEDD00BCB489 /* User.swift in Sources */,
 				9C2F401E1C13AD7700BCB489 /* ChoreListTableViewController.swift in Sources */,
 				9C2F40521C13B00F00BCB489 /* Chore.swift in Sources */,
@@ -310,6 +315,7 @@
 				9C2F40621C145E8400BCB489 /* PickerViewDelegateAndSource.swift in Sources */,
 				9C2F401A1C13AD7700BCB489 /* AppDelegate.swift in Sources */,
 				9C2F40541C13B2B600BCB489 /* AddChoreTableViewController.swift in Sources */,
+				9C2F40671C167BA600BCB489 /* HouseTableViewController.swift in Sources */,
 				9C2F401C1C13AD7700BCB489 /* ChoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

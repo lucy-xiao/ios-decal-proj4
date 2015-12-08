@@ -12,7 +12,8 @@ class ChoreViewController: UIViewController {
     
     var thisChore: Chore?
     var indexInList: Int?
-    var thisUserName: String!
+    // RENAME QQ "choreOwner"
+    var thisUser: User!
     var choreListTable: ChoreListTableViewController!
     
     
@@ -48,9 +49,12 @@ class ChoreViewController: UIViewController {
             print("thisChore!.person", thisChore!.person)
             print("thisChore!.choreName", thisChore!.choreName)
 //            print(thisChoreLabel)
-            if thisChore!.person!.username == thisUserName {
-                thisNameLabel.text = thisUserName + " (you)"
+            if thisChore!.person!.username == thisUser.username {
+                print("They are equivalent?")
+                print(thisChore!.person!.username)
+                thisNameLabel.text = thisUser.username + " (you)"
             } else {
+                print("They are NOT equivalent")
 //                print(choreLabel)
 //                print(nameLabel)
 //                print(thisNameLabel.text)
@@ -65,7 +69,7 @@ class ChoreViewController: UIViewController {
                 thisFinishedButton.setTitle("Working on it...", forState: .Normal)
             }
         } else {
-            thisNameLabel.text = thisUserName + " (you)"
+            thisNameLabel.text = thisUser.username
             thisChoreLabel.text = "No chores! 🎉"
             thisFinishedButton.setTitle("", forState: .Normal)
         }
@@ -78,9 +82,11 @@ class ChoreViewController: UIViewController {
         if thisChore!.finished {
 //            print(thisChore!.finished)
             thisChore!.finished = false
+            thisUser.finishedChore = false
         } else {
 //             print(thisChore!.finished)
             thisChore!.finished = true
+            thisUser.finishedChore = true
         }
         let cellPath = NSIndexPath(forRow: thisChore!.indexRow, inSection: 0)
         let cell = choreListTable.tableView.cellForRowAtIndexPath(cellPath)
@@ -100,16 +106,13 @@ class ChoreViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func pressedBack() {
-        
-    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "unwindBackToTable") {
             let dest = segue.destinationViewController as! ChoreListTableViewController
             if (thisChore != nil) {
                 dest.choresList[indexInList!] = thisChore!
+                dest.users[thisUser.userIndexRow] = thisUser
                 print("prepareForSegue: ", thisChore!.finished)
             }
         }

@@ -14,23 +14,27 @@ class ChoreListTableViewController: UITableViewController {
     var rowOfLastChoreSelected: Int? = nil
     var selectedAChore = false
     var thisUser: User?
-//    var choreViewController: MyChoreViewController!
-    var choreViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MyChoreViewController") as! MyChoreViewController
+    var choreViewController: MyChoreViewController!
+//    var choreViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MyChoreViewController") as! MyChoreViewController
     var users: [User?]!
     var pickerDelegateAndSource: PickerViewDelegateAndSource?
     var seg: UIStoryboardSegue?
+    var tabBar: UITabBarController!
     //var loginView: LoginViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        users = [User(username: "Joey"), User(username: "Sandy"), User(username: "Lucy")]
+//        users = [User(username: "Joey"), User(username: "Sandy"), User(username: "Lucy")]
         pickerDelegateAndSource = PickerViewDelegateAndSource(allUsers: users)
         // Do any additional setup after loading the view, typically from a nib.
 //        let chore1 = Chore(choreName: "eat ALLLL the fooooood", username: "helena")
 //        choresList.append(chore1)
 //        let chore2 = Chore(choreName: "punch people", username: "lucy")
 //        choresList.append(chore2)
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        print("View will appear: ", users)
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,10 +95,10 @@ class ChoreListTableViewController: UITableViewController {
             print(choresList[rowOfLastChoreSelected!])
             print(choresList[rowOfLastChoreSelected!].person)
             print(choresList[rowOfLastChoreSelected!].person.username)
-            dest.thisUserName = choresList[rowOfLastChoreSelected!].person.username
+            //dest.thisUserName = choresList[rowOfLastChoreSelected!].person.username
+            dest.thisUser = thisUser!
             print("selectedAChore111: ",selectedAChore)
             if selectedAChore {
-                
                 dest.thisChore = choresList[rowOfLastChoreSelected!]
                 dest.indexInList = rowOfLastChoreSelected
                 dest.choreListTable = self
@@ -110,6 +114,7 @@ class ChoreListTableViewController: UITableViewController {
                 print("   ", lastChoreSelected!.choreName)
             }*/
         } else if (segue.identifier == "ToAddChoreView") {
+            pickerDelegateAndSource = PickerViewDelegateAndSource(allUsers: users)
             let nav = segue.destinationViewController as! UINavigationController
             let dest = nav.topViewController as! AddChoreTableViewController
             dest.choreTable = self
@@ -137,12 +142,20 @@ class ChoreListTableViewController: UITableViewController {
         self.tabBarController?.selectedIndex = 1
         if (addedChore != nil) {
             addedChore!.indexRow = choresList.count
-            print("backfromaddChoreView= ", addedChore?.choreName, ": ", addedChore?.person.username, ": ", addedChore!.indexRow)
             choresList.append(addedChore!)
             if addedChore!.person!.username == thisUser!.username {
                 choreViewController.thisChore = addedChore
                 choreViewController.reloadView()
             }
+            self.tableView.reloadData()
+        }
+    }
+    
+    func backFromAddHouseMemberView(var addedMember: User?) {
+        self.tabBarController?.selectedIndex = 2
+        if (addedMember != nil) {
+            addedMember!.userIndexRow = users.count
+            users.append(addedMember!)
             self.tableView.reloadData()
         }
     }
